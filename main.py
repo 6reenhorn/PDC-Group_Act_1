@@ -22,12 +22,14 @@ while True:
 
     if userChoice == "1":
         print(add(num1, num2))
-    
-    if userChoice == "2":
+    elif userChoice == "2":
         print(subtract(num1, num2))
-
-    if userChoice == "3":
+    elif userChoice == "3":
         print(multiply(num1, num2)) 
-    
-    if userChoice == "4":
-        print(divide(num1, num2))
+    elif userChoice == "4":
+        try:
+            print(divide(num1, num2))
+        except ValueError as e:
+            print(e)
+    else: 
+        print("Invalid choice, plese enter a valid chocie.")
